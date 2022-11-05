@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import './App.css'
+import { marked } from 'marked'
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      markdown: "",
+      markdown: ""
     };
   }
 
   updateMarkdown(markdown) {
-    this.setState({ markdown });
+    this.setState({ markdown })
   }
+
   
   render() {
     return (
@@ -21,17 +23,22 @@ export default class App extends Component {
           <div className='editor'>
             <h2 className='editor-title'>Editor</h2>
             <div className='editor-container'>
-              <textarea className='input' value={this.state.markdown}></textarea>
+              <textarea 
+                className='input' 
+                value={this.state.markdown} 
+                onChange={(e) => {this.updateMarkdown(e.target.value);}}>
+              </textarea>
             </div>
           </div>
           <div className='previewer'>
             <h2 className='previewer-title'>Previewer</h2>
-            <div className='previewer-container'>
-
+            <div className='previewer-container' dangerouslySetInnerHTML={{ 
+              __html: marked(this.state.markdown),
+              }}>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
