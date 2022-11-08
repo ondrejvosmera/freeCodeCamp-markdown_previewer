@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import { marked } from 'marked'
-import { BsArrowsFullscreen } from 'react-icons/bs'
 
 export default class App extends Component {
   constructor(props) {
@@ -22,10 +21,7 @@ export default class App extends Component {
         <div className='container'>
           <div className='editor'>
             <div className='editor-title-container'>
-              <h2 className='editor-title'>Editor</h2>
-              <div className='fullscreen'>
-                <BsArrowsFullscreen />
-              </div>
+            <h2 className='editor-title'>Editor</h2>
             </div>
             <div className='editor-container'>
               <textarea 
@@ -38,10 +34,7 @@ export default class App extends Component {
           </div>
           <div className='previewer'>
           <div className='previewer-title-container'>
-              <h2 className='previewer-title'>Previewer</h2>
-              <div className='fullscreen'>
-                <BsArrowsFullscreen />
-              </div>
+            <h2 className='previewer-title'>Previewer</h2>
             </div>
             <div className='previewer-container' dangerouslySetInnerHTML={{ 
               __html: marked(this.state.markdown),

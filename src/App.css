@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .App {
@@ -17,7 +17,7 @@
 
 .title {
   margin: 20px 0 40px 0;
-  color: #7CFC00;
+  color: #7cfc00;
 }
 
 .container {
@@ -32,12 +32,12 @@
   align-items: center;
   background-color: #000;
   padding: 20px;
-  border: 1px #7CFC00 solid;
-  color: #7CFC00;
+  border: 1px #7cfc00 solid;
+  color: #7cfc00;
 }
 
 .editor-title {
-  color: #7CFC00;
+  color: #7cfc00;
 }
 
 .editor {
@@ -51,8 +51,13 @@
   height: 430px;
   padding: 10px;
   background-color: #000;
-  color: #7CFC00;
-  border-color: #7CFC00;
+  color: #7cfc00;
+  border-color: #7cfc00;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid #7cfc00;
 }
 
 .previewer-title-container {
@@ -85,12 +90,6 @@
   padding: 10px;
 }
 
-.fullscreen {
-  position: absolute;
-  right: 0;
-  margin-right: 20px;
-}
-
 @media only screen and (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -102,7 +101,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .editor {
     width: 300px;
     height: 400px;
